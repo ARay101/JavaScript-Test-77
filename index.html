@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Alden's Class 77</title>        
+        <title>JavaScript Test</title>        
     </head>
 
     <body>
         <h1>Open console</h1>
+        <button onclick="funcipro()">Button 1</button>
+        <button onclick="funciipro()">Button 2</button>
         <script>
             console.log("Hi! This is a console screen test. :)");
+            console.log("DO NOT CLICK THE BUTTONS UNTIL SAID SO.")
+            console.log("The following codes are from class.");
             var nameone = "John";
             console.log(nameone);
             
@@ -57,6 +61,41 @@
 
             var matheight = mathseven.toFixed(3);
             console.log(matheight);
+
+            console.log("The next codes are for projects");
+
+            function funcipro(){
+                var mathonepro = parseFloat(prompt("Choose any number"));
+                console.log(mathonepro);
+                var mathtwopro = parseFloat(prompt("Choose any number"));
+                console.log(mathtwopro);
+                console.log(mathonepro+mathtwopro);
+                console.log(mathonepro-mathtwopro);
+                var maththreepro = mathonepro*mathtwopro;
+                console.log(maththreepro);
+                console.log(mathonepro/mathtwopro);
+                if (maththreepro <= 32){
+                    console.log(Math.pow(maththreepro));
+                }
+            }
+
+            function funciipro(){
+                console.log("Find out how well your country is in the Olympics!");
+                console.log("Compare the number given with numbers from other countries.");
+                console.log("Compare it to these three countries in the 2016 Summer Olympics: the US had a score of 250(got the most medals), Brazil had 39(13th), and India had 3(67th). The ranks are based on most medals, not these numbers.");
+                var gold = parseInt(prompt("How many gold medals does the country have?"));
+                console.log(gold);
+                var silver = parseInt(prompt("How many silver medals does the country have?"));
+                console.log(silver);
+                var bronze = parseInt(prompt("How many bronze medals does the country have?"));
+                console.log(bronze);
+                console.log(3*gold + 2*silver + bronze);
+                var tiebreaker = (13*gold + 8*silver + 5*bronze)/4;
+                console.log("Tiebreaker: " + tiebreaker);
+            }
+
+            console.log("You now have permission to click the buttons!");
+
         </script>
     </body>
 </html>
