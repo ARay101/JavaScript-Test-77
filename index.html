@@ -65,33 +65,35 @@
             console.log("The next codes are for projects");
 
             function funcipro(){
-                var mathonepro = parseFloat(prompt("Choose any number"));
-                console.log(mathonepro);
+                var mathonepro = parseFloat(prompt("Choose any number")); //Number will be chosen via question
+                console.log(mathonepro); 
                 var mathtwopro = parseFloat(prompt("Choose any number"));
                 console.log(mathtwopro);
-                console.log(mathonepro+mathtwopro);
-                console.log(mathonepro-mathtwopro);
-                var maththreepro = mathonepro*mathtwopro;
-                console.log(maththreepro);
-                console.log(mathonepro/mathtwopro);
-                if (maththreepro <= 32){
-                    console.log(Math.pow(maththreepro));
+                console.log(mathonepro+mathtwopro); //Addition
+                console.log(mathonepro-mathtwopro); //Subtraction
+                var maththreepro = mathonepro*mathtwopro; //Multiplication. Variable so that it can be used later
+                console.log(maththreepro); 
+                console.log(mathonepro/mathtwopro); //Division
+                if (maththreepro <= 32){ //If the numbers are small enough(when they are multiplied, it's less than or equal to 32)
+                    console.log(Math.pow(mathonepro,mathtwopro)); //Exponents will be done
+                    console.log(Math.pow(mathtwopro,mathonepro));
                 }
             }
 
             function funciipro(){
                 console.log("Find out how well your country is in the Olympics!");
                 console.log("Compare the number given with numbers from other countries.");
-                console.log("Compare it to these three countries in the 2016 Summer Olympics: the US had a score of 250(got the most medals), Brazil had 39(13th), and India had 3(67th). The ranks are based on most medals, not these numbers.");
-                var gold = parseInt(prompt("How many gold medals does the country have?"));
+                console.log("Compare it to these three countries in the 2016 Summer Olympics: the US had a score of 250(got the most medals), Brazil had 39(13th), and India had 3(67th). The ranks are based on most medals, not these numbers."); //US had 46 gold, 37 silver, 38 bronze; Brazil had 7 gold, 6 silver, 6 bronze; India had 1 silver; 1 bronze
+                var gold = parseInt(prompt("How many gold medals does the country have?")); //Asks for gold medals. Following the US in 2016, it would be 46.
                 console.log(gold);
-                var silver = parseInt(prompt("How many silver medals does the country have?"));
+                var silver = parseInt(prompt("How many silver medals does the country have?")); //Same as above. US had 37
                 console.log(silver);
-                var bronze = parseInt(prompt("How many bronze medals does the country have?"));
+                var bronze = parseInt(prompt("How many bronze medals does the country have?")); //US had 38
                 console.log(bronze);
-                console.log(3*gold + 2*silver + bronze);
-                var tiebreaker = (13*gold + 8*silver + 5*bronze)/4;
-                console.log("Tiebreaker: " + tiebreaker);
+                var score = 3*gold + 2*silver + bronze;
+                console.log("Score: " + score); //Score. Gold is multiplied by 3, as it is great for the country. Silver and bronze are weighted less, but still included. 46*3+37*2+38 = 250
+                var tiebreaker = (150*gold + 90*silver + 60*bronze)/55; //Tiebreaker. Ethiopia had 1 gold 2 silver 5 bronze, while Thailand had 2 of each medal. They were tied by score, but Ethiopia wins tiebreaker.
+                console.log("Tiebreaker: " + tiebreaker.toFixed(2));
             }
 
             console.log("You now have permission to click the buttons!");
